@@ -177,11 +177,18 @@ def main(path: str):
         f"{DATA_SHEET_TITLE}!", 
         metrics_dict_keys_full_sorted_list
     )
+    
     statistical_result_sheet.calculate_average_and_std_of_dice(dice_indexes_dict)
     statistical_result_sheet.calculate_average_and_std_of_spec(spec_indexes_dict)
     statistical_result_sheet.calculate_average_and_std_of_sens(sens_indexes_dict)
     statistical_result_sheet.calculate_average_and_std_of_accur(accur_indexes_dict)
     statistical_result_sheet.calculate_average_and_std_of_time(time_indexes_dict)
+
+    statistical_result_sheet.calculate_average_and_std_of_dice_overall(dice_indexes_dict)
+    statistical_result_sheet.calculate_average_and_std_of_spec_overall(spec_indexes_dict)
+    statistical_result_sheet.calculate_average_and_std_of_sens_overall(sens_indexes_dict)
+    statistical_result_sheet.calculate_average_and_std_of_accur_overall(accur_indexes_dict)
+    statistical_result_sheet.calculate_average_and_std_of_time_overall(time_indexes_dict)
 
     workbook.save("../result.xlsx")
 # def main
